@@ -46,7 +46,7 @@ export const RestaurantDetail = () => {
                   <div className="detailing">
                     <div className="image-name">
                       <div className="image-container">
-                        <img src={rating.pp} />
+                        <img src={rating.pp} alt={rating.revName[0]}/>
                       </div>
                       <p className="reviewer">{rating.revName}</p>
                     </div>

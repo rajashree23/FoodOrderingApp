@@ -5,7 +5,7 @@ import { useFoodOrderingContext } from "../../../context/FoodOrderingContext";
 import { Menu } from "./Menu";
 
 export const RestaurantList = () => {
-  const { restaurantData, cuisineData, selectedCuisine } =
+  const { restaurantData, selectedCuisine } =
     useFoodOrderingContext();
 
   const restaurantBySelectedCuisine = restaurantData.filter(

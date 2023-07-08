@@ -18,7 +18,13 @@ export const foodOrderingReducer = (state, action) => {
         ...state,
         restaurantData: state.restaurantData.map((r) =>
           r.name === action.payload.restaurantName
-            ? { ...r, ratings: [...r.ratings, action.payload.input] }
+            ? {
+                ...r,
+                ratings: [...r.ratings, action.payload.input],
+                averageRating:
+                  (r.ratings.reduce((sum, curr) => curr.rating + sum, 0)) /
+                  (r.ratings.length + 1),
+              }
             : r
         ),
       };

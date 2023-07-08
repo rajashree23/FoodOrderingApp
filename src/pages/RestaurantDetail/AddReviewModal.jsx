@@ -7,7 +7,7 @@ export const AddReviewModal = ({ setShowModal, restaurantName }) => {
   const [input, setInput] = useState({
     pp: "https://picsum.photos/200",
     revName: "Rajashree",
-    rating: "",
+    rating: 1,
     comment: "",
   });
   return (

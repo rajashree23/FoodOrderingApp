@@ -24,10 +24,11 @@ export const RestaurantDetail = () => {
             <div className="description">
               <div>
                 <h1>{restaurant.name}</h1>
-
-                <p>{dishesAvailable.join(", ")}</p>
-                <p>{restaurant.address}</p>
-                <p>{restaurant.avgRating}</p>
+                <p className="dishes">{dishesAvailable.join(", ")}</p>
+                <p className="address">{restaurant.address}</p>
+                <p className="avg-rating">
+                  Average Rating {restaurant.averageRating}
+                </p>
               </div>
               <button
                 className="primary-button"
@@ -36,26 +37,26 @@ export const RestaurantDetail = () => {
                 Add Review
               </button>
             </div>
-            <div>
+            <div className="review-heading">
               <h2>Reviews</h2>
             </div>
-            <div>
+            <div className="review-container">
               {restaurant.ratings.map((rating, index) => (
                 <div className="rating-container" key={index}>
-                  <div>
+                  <div className="detailing">
                     <div className="image-name">
                       <div className="image-container">
                         <img src={rating.pp} />
                       </div>
                       <p className="reviewer">{rating.revName}</p>
                     </div>
-                    <div>
-                      <p>{rating.comment}</p>
+                    <div className="rating-star">
+                      <p>{rating.rating}</p>
+                      <AiOutlineStar />
                     </div>
                   </div>
-                  <div className="rating-star">
-                    <p>{rating.rating}</p>
-                    <AiOutlineStar />
+                  <div className="comment">
+                    <p>{rating.comment}</p>
                   </div>
                 </div>
               ))}

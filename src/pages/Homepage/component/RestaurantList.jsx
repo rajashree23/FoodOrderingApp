@@ -14,8 +14,8 @@ export const RestaurantList = () => {
 
   return (
     <div className="restaurant-container">
-      {restaurantBySelectedCuisine.map((restaurant) => (
-        <div key={restaurant.id} className="restaurant">
+      {restaurantBySelectedCuisine.map((restaurant,index) => (
+        <div key={index} className="restaurant">
           <div className="restaurant-heading">
             <h2>Dishes by {restaurant.name}</h2>
             <Link to={`restaurant/${restaurant.id}`} className="link">
@@ -23,8 +23,8 @@ export const RestaurantList = () => {
             </Link>
           </div>
           <div className="menu-list">
-            {restaurant.menu.map((m) => (
-              <Menu key={m.id} menu={m} restaurantName={restaurant.name} restaurantId={restaurant.id} />
+            {restaurant.menu.map((m,index) => (
+              <Menu key={index} menu={m} restaurantName={restaurant.name} restaurantId={restaurant.id} />
             ))}
           </div>
         </div>

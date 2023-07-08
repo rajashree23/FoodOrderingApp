@@ -22,8 +22,8 @@ export const foodOrderingReducer = (state, action) => {
                 ...r,
                 ratings: [...r.ratings, action.payload.input],
                 averageRating:
-                  (r.ratings.reduce((sum, curr) => curr.rating + sum, 0)) /
-                  (r.ratings.length + 1),
+                  ((r.ratings.reduce((sum, curr) => curr.rating + sum, 0)) /
+                  (r.ratings.length + 1)).toFixed(2),
               }
             : r
         ),

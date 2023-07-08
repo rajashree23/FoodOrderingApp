@@ -1,0 +1,83 @@
+.description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid grey;
+}
+.detail-container {
+  display: grid;
+  grid-template-columns: 10% 90%;
+}
+.image-container{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+.image-name{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+.reviewer{
+    font-weight: 700;
+}
+.rating-container{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+    align-items: center;
+
+}
+.rating-star{
+    display: flex;
+    background-color: green;
+    color: yellow;
+    padding: 0.5rem;
+    align-items: center;
+    gap: 0.25rem;
+    border-radius: 5px;
+}
+.modal-container{
+    background: var(--primary-color);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: var(--border-sm);
+    display: flex;
+    color: white;
+    /* box-shadow: 0px 0px 5px 2px #181818; */
+    z-index: 99;
+    padding: 3rem 2rem;
+    flex-direction: column;
+    gap: 3rem
+    
+}
+.main-heading{
+    display: flex;
+    gap: 1rem;
+}
+
+.main-heading .heading{
+    border-bottom: 1px solid white;
+}
+.input-fields{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.25rem;
+}
+.input-fields select{
+    width: 4rem;
+}
+.modal-container button{
+    align-self: center;
+    font-weight: 700;
+}
